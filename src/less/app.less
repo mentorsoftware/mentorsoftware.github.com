@@ -1,3 +1,41 @@
-.md-padding-10 {
-  padding: 10px;
+/*Clone ms-theme repository first. The directory
+  strucure should be:
+  /mentorsoftware.github.com
+  /websites
+  /ms-themes
+*/
+@import "../../../ms-themes/less/elements";
+@import "../../../ms-themes/less/bootstrap/app";
+
+#head {
+  background:#FFFFFF no-repeat;
+  background-size: cover;
+  min-height:479px;
+  text-align: center;
+  padding-top:240px;
+  color:white;
+  font-family:"Ubuntu", Helvetica, Arial;
+  font-weight:300;
+
+
+  &.primary {
+      background: #181015 url("../../src/images/panorama-Katowice-web.png") no-repeat;
+      background-size: cover;
+      min-height: 479px;
+      text-align: center;
+      padding-top: 240px;
+      color: white;
+      font-family: "Ubuntu";
+      font-weight: 300;
+    }
+  .lead {
+    font-family:"Ubuntu", Helvetica, Arial;
+    font-size:44px;
+    margin-bottom:6px;
+    color:white;
+    line-height:1.15em;
+  }
 }
+
+
+

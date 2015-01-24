@@ -1,95 +1,81 @@
-<!DOCTYPE html>
+<!DOCTYPE html >
 <html ng-app="app" ng-controller="MainController">
 <head lang="en">
     <meta charset="UTF-8">
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="MentorSoftware Ltd.">
+    <!-- Fonts
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,700,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100italic,300,500,700,900&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    -->
+    <!-- Angular -->
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.min.js"></script>
 
-    <title>Open source repository for MentorSoftware Ltd.</title>
-    <!-- Bootstrap -->
-    <!--<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" media="screen">
-    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">-->
+    <script src="src/js/main.js"></script>
+
+
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
-    <!-- Angular material-->
-    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+    <link rel="stylesheet" href="bower_components/bootswatch/united/bootstrap.min.css">
+
     <link rel="stylesheet" href="build/css/app.css">
 
-    <script src="build/js/app.js"></script>
-
+    <title></title>
 </head>
 <body>
-<div layout="column" layout-fill>
-    <section layout="row" flex>
-        <md-sidenav layout="column" class="site-sidenav md-sidenav-left md-whiteframe-z2" md-component-id="left"
-                    md-is-locked-open="$media('gt-sm')" md-component-id="left">
 
-            <md-toolbar class="md-theme-indigo">
-                <h1 class="md-toolbar-tools">
-                    <a href="" ng-click="goHome()" layout="row" flex>
-                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve" style="
-                        width: 40px; height: 40px;">
-                            <circle cx="40" cy="45" r="40" stroke="white" stroke-width="3" fill="orange"/>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Button for smallest screens -->
+        <a class="navbar-brand" href="/">
+        </a>
 
-                            <!--<path d="M 50 0 L 100 14 L 92 80 L 50 100 L 8 80 L 0 14 Z" fill="#b2b2b2"></path>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <img height="25px" src="src/images/MainLogoWhite.png"
+                     alt="Mentor Software Logo">
+            </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav pull-right">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Nav header</li>
+                        <li><a href="#">Separated link</a></li>
+                        <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
 
-                            <path d="M 50 0 L 100 14 L 92 80 L 50 100 L 8 80 L 0 14 Z" fill="#b2b2b2"></path>
-                            <path d="M 50 5 L 6 18 L 13.5 77 L 50 94 Z" fill="#E42939"></path>
-                            <path d="M 50 5 L 94 18 L 86.5 77 L 50 94 Z" fill="#B72833"></path>
-                            <path d="M 50 7 L 83 75 L 72 75 L 65 59 L 50 59 L 50 50 L 61 50 L 50 26 Z" fill="#b2b2b2"></path>
-                            <path d="M 50 7 L 17 75 L 28 75 L 35 59 L 50 59 L 50 50 L 39 50 L 50 26 Z" fill="#fff"></path>
-                            -->
 
-                        </svg>
-                        <div style="line-height:40px; text-indent: 1px;">Mentor Software</div>
-                    </a>
-                </h1>
-                <!--
-                <div class="md-toolbar-tools">
-                    <md-icon icon="src/images/logo_roboto..png"></md-icon>
-                    <md-button aria-label="">
-                        <md-icon class="fa fa-fw fa-bars"></md-icon>
-                    </md-button>
-                </div>-->
-            </md-toolbar>
-            <md-content flex class="md-padding-10" layout="column" layout-align="start start">
-                <md-button class="menu-item menu-sub-item md-menu-item" md-no-ink aria-label="" ng-click="toggleLeft();">
-                    <i class="fa fa-fw fa-bars"></i>
-                </md-button>
-                <md-button class="menu-item menu-sub-item md-menu-item" md-no-ink aria-label="Add">
-                    <i class="fa fa-fw fa-bars"></i>
-                </md-button>
+<!-- Begin page content -->
+<header id="head" class="primary">
 
-            </md-content>
-        </md-sidenav>
-        <div layout="column" layout-fill role="main">
-            <md-toolbar class="md-default-theme">
-                <!-- <md-icon class="fa fa-fw fa-bars"></md-icon>-->
-            </md-toolbar>
-            <md-content flex md-scroll-y class="md-padding-10">
+    <div class="container">
+        <div class="row">
+            <h1 class="lead">Making your idea a reality.</h1>
 
-                <div layout="column" layout-fill layout-align="center center">
-
-                    <p>
-                        The left sidenav will 'lock open' on a medium (>=960px wide) device.
-                    </p>
-                    <div>
-                        <md-button ng-click="toggleLeft()" class="md-primary" hide-gt-md>
-                            Toggle left
-                        </md-button>
-                    </div>
-                    <div>
-                        <md-button  class="md-primary">
-                            Toggle right
-                        </md-button>
-                    </div>
-                </div>
-            </md-content>
+            <p class="tagline"></p>
 
         </div>
-    </section>
-</div>
+    </div>
+</header>
 
 </body>
 </html>

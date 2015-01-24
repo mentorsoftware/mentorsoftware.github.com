@@ -6,7 +6,7 @@ var karma  = require('gulp-karma');
 gulp.task('unit', function() {
     return gulp.src('./thisdoesntexist')
         .pipe(karma({
-            configFile: 'test/karma.conf.js',
+            configFile: 'testnob/karma.conf.js',
             action: 'run'
         }))
         .on('error', function(err) {
