@@ -1,0 +1,26 @@
+{
+  "name": "mentorsoftware.github.com",
+  "version": "0.0.1",
+  "homepage": "https://github.com/mentorsoftware/mentorsoftware.github.com",
+  "authors": [
+    "Miroslaw Dylag <miroslaw.dylag@mentorsoftwareltd.com>"
+  ],
+  "description": "Giuthub pages for mentorsoftware.",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.2",
+    "font-awesome": "~4.2.0",
+    "angular": "~1.3.10",
+    "angular-bootstrap": "~0.12.0",
+    "angular-animate": "~1.3.10",
+    "angular-aria": "~1.3.10"
+  }
+}

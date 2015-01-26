@@ -4,8 +4,8 @@
   /websites
   /ms-themes
 */
-@import "../../../ms-themes/less/elements";
-@import "../../../ms-themes/less/bootstrap/app";
+@import "../../../ms-themes/less/main";
+@import "../../../ms-themes/less/bootstrap/main";
 
 #head {
   background:#FFFFFF no-repeat;
@@ -14,7 +14,6 @@
   text-align: center;
   padding-top:240px;
   color:white;
-  font-family:"Ubuntu", Helvetica, Arial;
   font-weight:300;
 
 
@@ -25,11 +24,10 @@
       text-align: center;
       padding-top: 240px;
       color: white;
-      font-family: "Ubuntu";
       font-weight: 300;
     }
   .lead {
-    font-family:"Ubuntu", Helvetica, Arial;
+    font-family:'Pacifico', cursive;
     font-size:44px;
     margin-bottom:6px;
     color:white;
@@ -37,5 +35,67 @@
   }
 }
 
+/*Jumptron*/
+.highlight
+{
+  margin-top:40px;
+}
+.h-caption
+{
+  text-align: center;
+}
+.p-caption { text-align: center; }
+.jumbotron {
+  background-color: #DDDDDD;
+}
+/*.h-caption i { display:block; font-size: 54px; color:#382526; margin-bottom:36px; }*/
+.h-caption h4 {
+  color:#382526;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom:20px; }
+.h-body
+{
+  margin-left: 10px; margin-right: 10px;
+}
+.highlight .block:hover {
+  //box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  //border-radius: 3px;
+}
+
+.a-thumbnail {
+  color: #333333;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: 200;
+  line-height: 22.85px;
+  margin: 0 0 0px;
+  height: 400px;
+}
+.a-thumbnail:hover,
+.a-thumbnail:focus {
+  text-decoration: none;
+  //outline: none;
+  //outline-offset: -2px;
+  border-color: transparent;
+  .fa-circle {
+    color: #fa6900;
+  }
+}
+
+/**Fonts */
+.fa-circle {
+  color: #F38630;
+}
+
+/** Size of font-awesome > 5.*/
+.fa-6x{font-size:6em}
+.fa-7x{font-size:7em}
+.fa-8x{font-size:8em}
+.fa-9x{font-size:9em}
+.fa-10x{font-size:10em}
 
 
+.bkg-white {
+  background-color: white;
+}
