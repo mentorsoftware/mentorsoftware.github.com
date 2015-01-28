@@ -7,6 +7,41 @@
 @import "../../../ms-themes/less/main";
 @import "../../../ms-themes/less/bootstrap/main";
 
+@color-normal : #5d5c5c;
+@color-hover: #3c3c3c;
+
+/**Fonts */
+.fa-circle {
+  color: @color-normal;
+}
+
+/** Size of font-awesome > 5.*/
+.fa-6x{font-size:6em}
+.fa-7x{font-size:7em}
+.fa-8x{font-size:8em}
+.fa-9x{font-size:9em}
+.fa-10x{font-size:10em}
+
+
+.bkg-white {
+  background-color: white;
+}
+
+.no-border {
+  border: none !important;
+}
+//rgb(93, 92, 92);
+//rgb(89, 132, 178);
+//;
+//;
+a {
+  color: #6d99d3;
+}
+a:hover{
+  color: #5984b2;
+  text-decoration: none !important;
+}
+
 #head {
   background:#FFFFFF no-repeat;
   background-size: cover;
@@ -62,40 +97,23 @@
   //box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
   //border-radius: 3px;
 }
-
-.a-thumbnail {
+.ms-thumbnail {
   color: #333333;
   font-size: 16px;
   text-decoration: none;
   font-weight: 200;
   line-height: 22.85px;
   margin: 0 0 0px;
-  height: 400px;
-}
-.a-thumbnail:hover,
-.a-thumbnail:focus {
-  text-decoration: none;
-  //outline: none;
-  //outline-offset: -2px;
-  border-color: transparent;
-  .fa-circle {
-    color: #fa6900;
+  height: 300px;
+  .no-border();
+  &:hover, &:focus {
+    text-decoration: none;
+    border-color: transparent;
+    .fa-circle {
+      color: @color-hover;
+    }
+
   }
+  
 }
 
-/**Fonts */
-.fa-circle {
-  color: #F38630;
-}
-
-/** Size of font-awesome > 5.*/
-.fa-6x{font-size:6em}
-.fa-7x{font-size:7em}
-.fa-8x{font-size:8em}
-.fa-9x{font-size:9em}
-.fa-10x{font-size:10em}
-
-
-.bkg-white {
-  background-color: white;
-}
