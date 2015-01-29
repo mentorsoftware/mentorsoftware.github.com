@@ -6,9 +6,9 @@
 */
 @import "../../../ms-themes/less/main";
 @import "../../../ms-themes/less/bootstrap/main";
-
-@color-normal : #5d5c5c;
-@color-hover: #3c3c3c;
+@import "variables";
+@import "mixins";
+@import "core";
 
 /**Fonts */
 .fa-circle {
@@ -82,6 +82,8 @@ a:hover{
 .p-caption { text-align: center; }
 .jumbotron {
   background-color: #DDDDDD;
+  //.no-margin-bottom;
+  //-bottom: 30px;
 }
 /*.h-caption i { display:block; font-size: 54px; color:#382526; margin-bottom:36px; }*/
 .h-caption h4 {
@@ -95,7 +97,7 @@ a:hover{
 }
 .highlight .block:hover {
   //box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
-  //border-radius: 3px;
+  border-radius: 3px;
 }
 .ms-thumbnail {
   color: #333333;
@@ -104,11 +106,11 @@ a:hover{
   font-weight: 200;
   line-height: 22.85px;
   margin: 0 0 0px;
-  height: 300px;
-  .no-border();
+  //height: 300px;
+  //.no-border();
   &:hover, &:focus {
     text-decoration: none;
-    border-color: transparent;
+    //border-color: transparent;
     .fa-circle {
       color: @color-hover;
     }
@@ -117,3 +119,13 @@ a:hover{
   
 }
 
+footer {
+  background-color: rgba(11, 11, 11, 0.62);
+  h4 {
+    font-size: 10px;
+    color: rgb(221, 221, 221);
+    font-size: 17px;
+    font-style: normal;
+    font-weight: bold;
+  }
+}
