@@ -1,34 +1,12 @@
-'use strict';
-require('angular/angular');
-require('angular-mocks/angular-mocks');
+describe('angularjs homepage todo list', function() {
+    it('should add a todo', function() {
+        browser.get('http://www.angularjs.org');
 
-//var app=require('../../../src/js/app');
-var app=require('../../../src/js/controllers');
+        element(by.model('todoText')).sendKeys('write a protractor test');
+        element(by.css('[value="add"]')).click();
 
-
-describe('Unit: MainCtrl', function() {
-
-    var ctrl, $scope;
-
-    beforeEach(function() {
-        //console.log('angular', angular.mock);
-        //instantiate the app module
-        //angular.mock.module('app');
-        angular.mock.module('app.controllers');
-
-        // mock the controller
-        angular.mock.inject(function($controller, $rootScope, $injector) {
-            //console.log($controller, app);
-            $scope = $rootScope.$new();
-            ctrl = $controller('MainController',{$scope : $scope, $injector: $injector});
-        });
+        var todoList = element.all(by.repeater('todo in todos'));
+        expect(todoList.count()).toEqual(3);
+        expect(todoList.get(2).getText()).toEqual('write a protractor test');
     });
-
-    it('should exist and have property name', function() {
-        expect(ctrl).toBeDefined();
-        expect($scope.name).toBeDefined();
-    });
-
-
-
 });
