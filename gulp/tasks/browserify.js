@@ -21,7 +21,7 @@ gulp.task('browserify', function () {
     //return stream
         //.pipe(source('output.js'))
         .pipe(browserified)
-        .pipe(ngAnnotate())
+        //.pipe(ngAnnotate())
         //.pipe(uglify())
         .pipe(gulp.dest('build/js/'));
 
